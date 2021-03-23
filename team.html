@@ -1,261 +1,322 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <title>Railly Clean - Team</title>
-    <meta http-equiv="Content-Language" content="English" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" type="text/css" href="../src/tailwind.css" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-  </head>
 
-  <body>
-    <nav class="relative z-50 h-24 select-none" x-data="{ showMenu: false }">
+<head>
+  <title>Railly Clean - Team</title>
+  <meta http-equiv="Content-Language" content="English" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="../src/tailwind.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+</head>
+
+<body>
+  <nav class="relative z-50 h-24 select-none" x-data="{ showMenu: false }">
+    <div
+      class="container relative flex flex-wrap items-center justify-between h-24 mx-auto overflow-hidden font-medium border-b border-gray-200 md:overflow-visible lg:justify-center sm:px-4 md:px-2">
+      <div class="flex items-center justify-start w-1/4 h-full pr-4">
+        <a href="views/index.html">
+          <img src="../resources/logo.png" alt="Railly-Clean" width="80" />
+        </a>
+      </div>
       <div
-        class="container relative flex flex-wrap items-center justify-between h-24 mx-auto overflow-hidden font-medium border-b border-gray-200 md:overflow-visible lg:justify-center sm:px-4 md:px-2"
-      >
-        <div class="flex items-center justify-start w-1/4 h-full pr-4">
-          <a href="views/index.html">
-            <img src="../resources/logo.png" alt="Railly-Clean" width="80" />
-          </a>
-        </div>
+        class="top-0 left-0 items-start hidden w-full h-full p-4 text-sm bg-gray-900 bg-opacity-50 md:items-center md:w-3/4 md:absolute lg:text-base md:bg-transparent md:p-0 md:relative md:flex"
+        :class="{'flex fixed': showMenu, 'hidden': !showMenu }">
         <div
-          class="top-0 left-0 items-start hidden w-full h-full p-4 text-sm bg-gray-900 bg-opacity-50 md:items-center md:w-3/4 md:absolute lg:text-base md:bg-transparent md:p-0 md:relative md:flex"
-          :class="{'flex fixed': showMenu, 'hidden': !showMenu }"
-        >
+          class="flex-col w-full h-auto overflow-hidden bg-white rounded-lg md:bg-transparent md:overflow-visible md:rounded-none md:relative md:flex md:flex-row">
           <div
-            class="flex-col w-full h-auto overflow-hidden bg-white rounded-lg md:bg-transparent md:overflow-visible md:rounded-none md:relative md:flex md:flex-row"
-          >
+            class="flex flex-col items-start justify-center w-full space-x-8 text-center lg:space-x-10 md:w-2/3 md:mt-0 md:flex-row md:items-center">
+            <a href="./system.html"
+              class="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center"
+              id="system.html">System</a>
+            <a href="./howitworks.html"
+              class="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center"
+              id="howitworks.html">How it works</a>
+            <a href="./evaluation.html"
+              class="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center"
+              id="evaluation">Evaluation</a>
+            <a href="./budget.html"
+              class="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center"
+              id="budget.html">Budget</a>
+            <a href="./team.html"
+              class="inline-block w-full py-2 mx-0 ml-6 font-medium text-left text-indigo-600 md:ml-0 md:w-auto md:px-0 md:mx-2 lg:mx-3 md:text-center"
+              id="team.html">Team</a>
+          </div>
+        </div>
+      </div>
+      <div @click="showMenu = !showMenu"
+        class="absolute right-0 flex flex-col items-center items-end justify-center w-10 h-10 bg-white rounded-full cursor-pointer md:hidden hover:bg-gray-100">
+        <svg class="w-6 h-6 text-gray-700" x-show="!showMenu" fill="none" stroke-linecap="round" stroke-linejoin="round"
+          stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" x-cloak="">
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <svg class="w-6 h-6 text-gray-700" x-show="showMenu" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg" x-cloak="">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </div>
+    </div>
+  </nav>
+
+  <div class="moving_header">
+    <div class="bg-gray-700">
+      <div class="pt-20 sm:pt-16 lg:pt-50">
+        <div class="max-w-screen-xl mx-auto text-center px-6 sm:px-8 lg:px-10  md:bg-contain">
+          <div
+            class="mt-2 text-3xl leading-9 font-extrabold text-white sm:text-4xl sm:leading-10 lg:text-5xl lg:leading-none text-justify">
+            Team
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+
+    <!-- Section 1 -->
+    <section class="flex items-center justify-center py-20 bg-white min-w-screen">
+      <div class="px-16 bg-white">
+        <div class="container flex flex-col items-start mx-auto lg:items-center">
+          <p
+            class="relative flex items-start justify-start w-full text-lg font-bold tracking-wider text-purple-500 uppercase lg:justify-center lg:items-center">
+            The team behind the robot</p>
+
+
+          <h2 class="relative flex items-start justify-start w-full max-w-3xl text-5xl font-bold lg:justify-center">
+            See what others are saying</h2>
+          <div class="block w-full h-0.5 max-w-lg mt-6 bg-purple-100 rounded-full"></div>
+
+          <div class="items-center justify-center w-full mt-12 mb-4 lg:flex">
+            <div class="flex flex-col items-start justify-start w-full h-auto mb-12 lg:w-1/3 lg:mb-0">
+              <div class="flex items-center justify-center">
+                <div class="w-16 h-16 mr-4 overflow-hidden bg-gray-200 rounded-full">
+                  <img
+                    src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1700&amp;q=80"
+                    class="object-cover w-full h-full">
+                </div>
+                <div class="flex flex-col items-start justify-center">
+                  <h4 class="font-bold text-gray-800">Caitlin McDougall</h4>
+                  <p class="text-gray-600">Project Manger</p>
+                </div>
+              </div>
+              <blockquote class="mt-8 text-lg text-gray-500">"This is a no-brainer if you want to take your business to
+                the next level. If you are looking for the ultimate toolset, this is it!"</blockquote>
+            </div>
             <div
-              class="flex flex-col items-start justify-center w-full space-x-8 text-center lg:space-x-10 md:w-2/3 md:mt-0 md:flex-row md:items-center"
-            >
-              <a
-                href="./system.html"
-                class="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center"
-                id="system.html"
-                >System</a
-              >
-              <a
-                href="./howitworks.html"
-                class="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center"
-                id="howitworks.html"
-                >How it works</a
-              >
-              <a
-                href="./evaluation.html"
-                class="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center"
-                id="evaluation"
-                >Evaluation</a
-              >
-              <a
-                href="./budget.html"
-                class="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center"
-                id="budget.html"
-                >Budget</a
-              >
-              <a
-                href="./team.html"
-                class="inline-block w-full py-2 mx-0 ml-6 font-medium text-left text-indigo-600 md:ml-0 md:w-auto md:px-0 md:mx-2 lg:mx-3 md:text-center"
-                id="team.html"
-                >Team</a
-              >
+              class="flex flex-col items-start justify-start w-full h-auto px-0 mx-0 mb-12 border-l border-r border-transparent lg:w-1/3 lg:mb-0 lg:px-8 lg:mx-8 lg:border-gray-200">
+              <div class="flex items-center justify-center">
+                <div class="w-16 h-16 mr-4 overflow-hidden bg-gray-200 rounded-full">
+                  <img
+                    src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2547&amp;q=80"
+                    class="object-cover w-full h-full">
+                </div>
+                <div class="flex flex-col items-start justify-center">
+                  <h4 class="font-bold text-gray-800">Austin Cheang</h4>
+                  <p class="text-gray-600">Simulation modelling</p>
+                </div>
+              </div>
+              <blockquote class="mt-8 text-lg text-gray-500">"Thanks for creating this service. My life is so much
+                easier.
+                Thanks for making such a great product."</blockquote>
+            </div>
+            <div class="flex flex-col items-start justify-start w-full h-auto lg:w-1/3">
+              <div class="flex items-center justify-center">
+                <div class="w-16 h-16 mr-4 overflow-hidden bg-gray-200 rounded-full">
+                  <img
+                    src="https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1256&amp;q=80"
+                    class="object-cover w-full h-full">
+                </div>
+                <div class="flex flex-col items-start justify-center">
+                  <h4 class="font-bold text-gray-800">Arnav Desai</h4>
+                  <p class="text-gray-600">Creator of Stuff</p>
+                </div>
+              </div>
+              <blockquote class="mt-8 text-lg text-gray-500">"Packed with awesome content and exactly what I was
+                looking
+                for. I would highly recommend this to anyone."</blockquote>
             </div>
           </div>
         </div>
-        <div
-          @click="showMenu = !showMenu"
-          class="absolute right-0 flex flex-col items-center items-end justify-center w-10 h-10 bg-white rounded-full cursor-pointer md:hidden hover:bg-gray-100"
-        >
-          <svg
-            class="w-6 h-6 text-gray-700"
-            x-show="!showMenu"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            x-cloak=""
-          >
-            <path d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-          <svg
-            class="w-6 h-6 text-gray-700"
-            x-show="showMenu"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-            x-cloak=""
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M6 18L18 6M6 6l12 12"
-            ></path>
-          </svg>
+
+        <div class="container flex flex-col items-start mx-auto lg:items-center">
+          <div class="block w-full h-0.5 max-w-lg mt-6 bg-purple-100 rounded-full"></div>
+
+          <div class="items-center justify-center w-full mt-12 mb-4 lg:flex">
+            <div class="flex flex-col items-start justify-start w-full h-auto mb-12 lg:w-1/3 lg:mb-0">
+              <div class="flex items-center justify-center">
+                <div class="w-16 h-16 mr-4 overflow-hidden bg-gray-200 rounded-full">
+                  <img
+                    src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1700&amp;q=80"
+                    class="object-cover w-full h-full">
+                </div>
+                <div class="flex flex-col items-start justify-center">
+                  <h4 class="font-bold text-gray-800">Sean Memery</h4>
+                  <p class="text-gray-600">CEO of Something</p>
+                </div>
+              </div>
+              <blockquote class="mt-8 text-lg text-gray-500">"This is a no-brainer if you want to take your business to
+                the next level. If you are looking for the ultimate toolset, this is it!"</blockquote>
+            </div>
+            <div
+              class="flex flex-col items-start justify-start w-full h-auto px-0 mx-0 mb-12 border-l border-r border-transparent lg:w-1/3 lg:mb-0 lg:px-8 lg:mx-8 lg:border-gray-200">
+              <div class="flex items-center justify-center">
+                <div class="w-16 h-16 mr-4 overflow-hidden bg-gray-200 rounded-full">
+                  <img
+                    src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2547&amp;q=80"
+                    class="object-cover w-full h-full">
+                </div>
+                <div class="flex flex-col items-start justify-center">
+                  <h4 class="font-bold text-gray-800">Apurv Mishra</h4>
+                  <p class="text-gray-600">CTO of Business</p>
+                </div>
+              </div>
+              <blockquote class="mt-8 text-lg text-gray-500">"Thanks for creating this service. My life is so much
+                easier.
+                Thanks for making such a great product."</blockquote>
+            </div>
+            <div class="flex flex-col items-start justify-start w-full h-auto lg:w-1/3">
+              <div class="flex items-center justify-center">
+                <div class="w-16 h-16 mr-4 overflow-hidden bg-gray-200 rounded-full">
+                  <img
+                    src="https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1256&amp;q=80"
+                    class="object-cover w-full h-full">
+                </div>
+                <div class="flex flex-col items-start justify-center">
+                  <h4 class="font-bold text-gray-800">Suhas Narreddy</h4>
+                  <p class="text-gray-600">Creator of Stuff</p>
+                </div>
+              </div>
+              <blockquote class="mt-8 text-lg text-gray-500">"Packed with awesome content and exactly what I was
+                looking
+                for. I would highly recommend this to anyone."</blockquote>
+            </div>
+          </div>
+        </div>
+
+        <div class="container flex flex-col items-start mx-auto lg:items-center">
+          <div class="block w-full h-0.5 max-w-lg mt-6 bg-purple-100 rounded-full"></div>
+          <div class="items-center justify-center w-full mt-12 mb-4 lg:flex">
+            <div class="flex flex-col items-start justify-start w-full h-auto mb-12 lg:w-1/3 lg:mb-0">
+              <div class="flex items-center justify-center">
+                <div class="w-16 h-16 mr-4 overflow-hidden bg-gray-200 rounded-full">
+                  <img src="../resources/anh.jpg" class="object-cover w-full h-full">
+                </div>
+                <div class="flex flex-col items-start justify-center">
+                  <h4 class="font-bold text-gray-800">Anh Nguyen</h4>
+                  <p class="text-gray-600">CEO of Something</p>
+                </div>
+              </div>
+              <blockquote class="mt-8 text-lg text-gray-500">"This is a no-brainer if you want to take your business to
+                the next level. If you are looking for the ultimate toolset, this is it!"</blockquote>
+            </div>
+            <div
+              class="flex flex-col items-start justify-start w-full h-auto px-0 mx-0 mb-12 border-l border-r border-transparent lg:w-1/3 lg:mb-0 lg:px-8 lg:mx-8 lg:border-gray-200">
+              <div class="flex items-center justify-center">
+                <div class="w-16 h-16 mr-4 overflow-hidden bg-gray-200 rounded-full">
+                  <img src="../resources/dan.jpg" class="object-cover w-full h-full">
+                </div>
+                <div class="flex flex-col items-start justify-center">
+                  <h4 class="font-bold text-gray-800">Daniel Spencer</h4>
+                  <p class="text-gray-600">CTO of Business</p>
+                </div>
+              </div>
+              <blockquote class="mt-8 text-lg text-gray-500">"Thanks for creating this service. My life is so much
+                easier.
+                Thanks for making such a great product."</blockquote>
+            </div>
+            <div class="flex flex-col items-start justify-start w-full h-auto lg:w-1/3">
+              <div class="flex items-center justify-center">
+                <div class="w-16 h-16 mr-4 overflow-hidden bg-gray-200 rounded-full">
+                  <img
+                    src="https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1256&amp;q=80"
+                    class="object-cover w-full h-full">
+                </div>
+                <div class="flex flex-col items-start justify-center">
+                  <h4 class="font-bold text-gray-800">Máté Stodulka</h4>
+                  <p class="text-gray-600">Creator of Stuff</p>
+                </div>
+              </div>
+              <blockquote class="mt-8 text-lg text-gray-500">"Packed with awesome content and exactly what I was
+                looking
+                for. I would highly recommend this to anyone."</blockquote>
+            </div>
+          </div>
         </div>
       </div>
-    </nav>
+    </section>
 
-    <div>
+    <section class="py-24 bg-white">
+      <div class="px-8 mx-auto max-w-7xl lg:px-16">
+        <h2 class="mb-4 text-xl font-bold md:text-3xl">Milestone/Demo</h2>
 
-      <!-- Section 1 -->
-      <section class="flex items-center justify-center py-20 bg-white min-w-screen">
-          <div class="px-16 bg-white">
-              <div class="container flex flex-col items-start mx-auto lg:items-center">
-                  <p class="relative flex items-start justify-start w-full text-lg font-bold tracking-wider text-purple-500 uppercase lg:justify-center lg:items-center">The team behind the robot</p>
+        <div class="relative flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 overflow-hidden bg-gray-100 sm:rounded-xl" >
+        <h4 class="text-xl font-medium text-gray-700">Demo 1</h4>
+        <p class="text-base text-center text-gray-500">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non et illo hic rerum, eos soluta voluptatem corrupti cupiditate! Vel, sequi. Pariatur soluta similique repellat accusamus quas debitis voluptas voluptate illum?
+          Culpa harum quas consequatur nesciunt exercitationem debitis nulla commodi voluptatem officia nostrum. Voluptatibus odio provident incidunt eum laboriosam dolorum in cupiditate doloribus deserunt, ex laborum. Numquam nulla tempora aliquam a?
+        </p>
+      </div>
+<br><br>
+      <div class="relative flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 overflow-hidden bg-gray-100 sm:rounded-xl">
+      <h4 class="text-xl font-medium text-gray-700">Demo 2</h4>
+      <p class="text-base text-center text-gray-500">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non et illo hic rerum, eos soluta voluptatem corrupti cupiditate! Vel, sequi. Pariatur soluta similique repellat accusamus quas debitis voluptas voluptate illum?
+        Culpa harum quas consequatur nesciunt exercitationem debitis nulla commodi voluptatem officia nostrum. Voluptatibus odio provident incidunt eum laboriosam dolorum in cupiditate doloribus deserunt, ex laborum. Numquam nulla tempora aliquam a?
+      </p>
+    </div>
+
+    </section>
 
 
-                  <h2 class="relative flex items-start justify-start w-full max-w-3xl text-5xl font-bold lg:justify-center">
-                      See what others are saying</h2>
-                      <div class="block w-full h-0.5 max-w-lg mt-6 bg-purple-100 rounded-full"></div>
 
-                  <div class="items-center justify-center w-full mt-12 mb-4 lg:flex">
-                      <div class="flex flex-col items-start justify-start w-full h-auto mb-12 lg:w-1/3 lg:mb-0">
-                          <div class="flex items-center justify-center">
-                              <div class="w-16 h-16 mr-4 overflow-hidden bg-gray-200 rounded-full">
-                                  <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1700&amp;q=80" class="object-cover w-full h-full">
-                              </div>
-                              <div class="flex flex-col items-start justify-center">
-                                  <h4 class="font-bold text-gray-800">Caitlin McDougall</h4>
-                                  <p class="text-gray-600">Project Manger</p>
-                              </div>
-                          </div>
-                          <blockquote class="mt-8 text-lg text-gray-500">"This is a no-brainer if you want to take your business to the next level. If you are looking for the ultimate toolset, this is it!"</blockquote>
-                      </div>
-                      <div class="flex flex-col items-start justify-start w-full h-auto px-0 mx-0 mb-12 border-l border-r border-transparent lg:w-1/3 lg:mb-0 lg:px-8 lg:mx-8 lg:border-gray-200">
-                          <div class="flex items-center justify-center">
-                              <div class="w-16 h-16 mr-4 overflow-hidden bg-gray-200 rounded-full">
-                                  <img src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2547&amp;q=80" class="object-cover w-full h-full">
-                              </div>
-                              <div class="flex flex-col items-start justify-center">
-                                  <h4 class="font-bold text-gray-800">Austin Cheang</h4>
-                                  <p class="text-gray-600">Simulation modelling</p>
-                              </div>
-                          </div>
-                          <blockquote class="mt-8 text-lg text-gray-500">"Thanks for creating this service. My life is so much
-                              easier.
-                              Thanks for making such a great product."</blockquote>
-                      </div>
-                      <div class="flex flex-col items-start justify-start w-full h-auto lg:w-1/3">
-                          <div class="flex items-center justify-center">
-                              <div class="w-16 h-16 mr-4 overflow-hidden bg-gray-200 rounded-full">
-                                  <img src="https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1256&amp;q=80" class="object-cover w-full h-full">
-                              </div>
-                              <div class="flex flex-col items-start justify-center">
-                                  <h4 class="font-bold text-gray-800">Arnav Desai</h4>
-                                  <p class="text-gray-600">Creator of Stuff</p>
-                              </div>
-                          </div>
-                          <blockquote class="mt-8 text-lg text-gray-500">"Packed with awesome content and exactly what I was
-                              looking
-                              for. I would highly recommend this to anyone."</blockquote>
-                      </div>
-                  </div>
-              </div>
-
-              <div class="container flex flex-col items-start mx-auto lg:items-center">
-                      <div class="block w-full h-0.5 max-w-lg mt-6 bg-purple-100 rounded-full"></div>
-
-                  <div class="items-center justify-center w-full mt-12 mb-4 lg:flex">
-                      <div class="flex flex-col items-start justify-start w-full h-auto mb-12 lg:w-1/3 lg:mb-0">
-                          <div class="flex items-center justify-center">
-                              <div class="w-16 h-16 mr-4 overflow-hidden bg-gray-200 rounded-full">
-                                  <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1700&amp;q=80" class="object-cover w-full h-full">
-                              </div>
-                              <div class="flex flex-col items-start justify-center">
-                                  <h4 class="font-bold text-gray-800">Sean Memery</h4>
-                                  <p class="text-gray-600">CEO of Something</p>
-                              </div>
-                          </div>
-                          <blockquote class="mt-8 text-lg text-gray-500">"This is a no-brainer if you want to take your business to the next level. If you are looking for the ultimate toolset, this is it!"</blockquote>
-                      </div>
-                      <div class="flex flex-col items-start justify-start w-full h-auto px-0 mx-0 mb-12 border-l border-r border-transparent lg:w-1/3 lg:mb-0 lg:px-8 lg:mx-8 lg:border-gray-200">
-                          <div class="flex items-center justify-center">
-                              <div class="w-16 h-16 mr-4 overflow-hidden bg-gray-200 rounded-full">
-                                  <img src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2547&amp;q=80" class="object-cover w-full h-full">
-                              </div>
-                              <div class="flex flex-col items-start justify-center">
-                                  <h4 class="font-bold text-gray-800">Apurv Mishra</h4>
-                                  <p class="text-gray-600">CTO of Business</p>
-                              </div>
-                          </div>
-                          <blockquote class="mt-8 text-lg text-gray-500">"Thanks for creating this service. My life is so much
-                              easier.
-                              Thanks for making such a great product."</blockquote>
-                      </div>
-                      <div class="flex flex-col items-start justify-start w-full h-auto lg:w-1/3">
-                          <div class="flex items-center justify-center">
-                              <div class="w-16 h-16 mr-4 overflow-hidden bg-gray-200 rounded-full">
-                                  <img src="https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1256&amp;q=80" class="object-cover w-full h-full">
-                              </div>
-                              <div class="flex flex-col items-start justify-center">
-                                  <h4 class="font-bold text-gray-800">Suhas Narreddy</h4>
-                                  <p class="text-gray-600">Creator of Stuff</p>
-                              </div>
-                          </div>
-                          <blockquote class="mt-8 text-lg text-gray-500">"Packed with awesome content and exactly what I was
-                              looking
-                              for. I would highly recommend this to anyone."</blockquote>
-                      </div>
-                  </div>
-              </div>
-
-              <div class="container flex flex-col items-start mx-auto lg:items-center">
-                      <div class="block w-full h-0.5 max-w-lg mt-6 bg-purple-100 rounded-full"></div>
-                  <div class="items-center justify-center w-full mt-12 mb-4 lg:flex">
-                      <div class="flex flex-col items-start justify-start w-full h-auto mb-12 lg:w-1/3 lg:mb-0">
-                          <div class="flex items-center justify-center">
-                              <div class="w-16 h-16 mr-4 overflow-hidden bg-gray-200 rounded-full">
-                                  <img src="../resources/anh.jpg" class="object-cover w-full h-full">
-                              </div>
-                              <div class="flex flex-col items-start justify-center">
-                                  <h4 class="font-bold text-gray-800">Anh Nguyen</h4>
-                                  <p class="text-gray-600">CEO of Something</p>
-                              </div>
-                          </div>
-                          <blockquote class="mt-8 text-lg text-gray-500">"This is a no-brainer if you want to take your business to the next level. If you are looking for the ultimate toolset, this is it!"</blockquote>
-                      </div>
-                      <div class="flex flex-col items-start justify-start w-full h-auto px-0 mx-0 mb-12 border-l border-r border-transparent lg:w-1/3 lg:mb-0 lg:px-8 lg:mx-8 lg:border-gray-200">
-                          <div class="flex items-center justify-center">
-                              <div class="w-16 h-16 mr-4 overflow-hidden bg-gray-200 rounded-full">
-                                  <img src="dan.jpg" class="object-cover w-full h-full">
-                              </div>
-                              <div class="flex flex-col items-start justify-center">
-                                  <h4 class="font-bold text-gray-800">Daniel Spencer</h4>
-                                  <p class="text-gray-600">CTO of Business</p>
-                              </div>
-                          </div>
-                          <blockquote class="mt-8 text-lg text-gray-500">"Thanks for creating this service. My life is so much
-                              easier.
-                              Thanks for making such a great product."</blockquote>
-                      </div>
-                      <div class="flex flex-col items-start justify-start w-full h-auto lg:w-1/3">
-                          <div class="flex items-center justify-center">
-                              <div class="w-16 h-16 mr-4 overflow-hidden bg-gray-200 rounded-full">
-                                  <img src="https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1256&amp;q=80" class="object-cover w-full h-full">
-                              </div>
-                              <div class="flex flex-col items-start justify-center">
-                                  <h4 class="font-bold text-gray-800">Máté Stodulka</h4>
-                                  <p class="text-gray-600">Creator of Stuff</p>
-                              </div>
-                          </div>
-                          <blockquote class="mt-8 text-lg text-gray-500">"Packed with awesome content and exactly what I was
-                              looking
-                              for. I would highly recommend this to anyone."</blockquote>
-                      </div>
-                  </div>
-              </div>
+    <!-- Section 1 -->
+    <section class="py-24 bg-white">
+      <div class="px-8 mx-auto max-w-7xl lg:px-16">
+        <h2 class="mb-4 text-xl font-bold md:text-3xl">Team Management</h2>
+        <div class="grid grid-cols-1 gap-0 text-gray-600 md:grid-cols-2 md:gap-16">
+          <div>
+            <h5 class="mt-10 mb-3 font-semibold text-gray-900">What is Tails</h5>
+            <p>Tails is a drag and drop page builder built on Top of TailwindCSS. You can drop components to create a
+              page that you can export.</p>
+            <h5 class="mt-10 mb-3 font-semibold text-gray-900">Can I try it for Free?</h5>
+            <p>Absolutely, you can try out tails for free; however, if you wish to access all the components and export
+              the page you'll need to upgrade your account.</p>
+            <h5 class="mt-10 mb-3 font-semibold text-gray-900">Where do I go to upgrade my account?</h5>
+            <p>
+              You can upgrade your account by visiting <a href="https://devdojo.com/pro"
+                class="text-indigo-500 underline">The Pro Upgrade Page</a>. You will also gain access to many other
+              applications and sections of the site.
+              <a href="https://help.hellonext.co/faq/startup-eligibility/" target="_blank">here</a>.
+            </p>
+            <h5 class="mt-10 mb-3 font-semibold text-gray-900">How long will I have access to Tails</h5>
+            <p>
+              You will have unlimited access to all your pre-built pages; however, if you want to be able to download
+              and export your pages, you'll need a pro account.
+              <a href="https://paddle.com" target="_blank">Paddle</a> for processing payments.
+            </p>
           </div>
-
-
-
-      </section>
-
-
-
-
+          <div>
+            <h5 class="mt-10 mb-3 font-semibold text-gray-900">How do I implement into my project</h5>
+            <p>Implementation in your project is very simple. You can use the exported page as a starting point, or you
+              can copy and paste the HTML into your own page.</p>
+            <h5 class="mt-10 mb-3 font-semibold text-gray-900">What is the license on the pages?</h5>
+            <p>You have unlimited use to the templates used in Tails; however, you cannot re-use the templates to sell
+              for others to use.</p>
+            <h5 class="mt-10 mb-3 font-semibold text-gray-900">Can I cancel my account if I not longer need it?</h5>
+            <p>Of course, you can feel free to cancel your account at anytime, and you can feel free to come back and
+              upgrade again whenever you're ready.</p>
+            <h5 class="mt-10 mb-3 font-semibold text-gray-900">What if I need help with my project?</h5>
+            <p>If you need assistance implementing the templates into your project you can contact support or you can
+              visit our <a href="https://devdojo.com/questions" class="text-indigo-500 underline">question section</a>.
+            </p>
+          </div>
         </div>
-  </body>
+      </div>
+    </section>
+
+
+
+
+  </div>
+</body>
+
 </html>
